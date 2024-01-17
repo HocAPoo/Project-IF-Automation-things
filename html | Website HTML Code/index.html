@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Project IF Website</title>
+        <link rel="icon" type="image/x-icon" href="base/Project-IF Favicon.png">
+        <style>
+                
+            html, body{
+                margin: 0px;
+                padding: 0px;
+            }
+            
+
+            /* Add image background and navigation bar*/
+            .bg-img {
+                background-image: url("base/homepage.png");
+                width: 100%;
+                height: 66.67vh;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+            }
+            
+            .containerleft, .containerright{
+                display: inline-block;
+                vertical-align: top;
+                text-align: center;
+                position: absolute;
+            }
+            .containerleft{
+                width:50%;
+                height: auto;
+                margin-top: 20px;   
+            }
+            
+            .containerright{
+                width:95%;
+                margin: 35px;   
+            }
+
+            .topnav a, .Logo a{  
+                color: #f2f2f2;
+                text-align: center;
+                padding: 0px 7px;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .Logo img{
+                width:60px;
+                height: auto;
+                float: left;
+                margin-left: 40px;
+                margin-top: -10px;
+            }
+            
+            .top-left a{
+                width: 150px;
+                height: 150px;
+            }
+
+            .topnav a {
+                float: right;
+                font-size: 16px;   
+            }
+
+            .Logo a{
+                float:left;
+                font-size: 26px;
+                margin-left: 0px;
+                margin-top:15px;
+            }
+
+            .topnav a:hover {
+                text-decoration: underline;
+            }
+            .socials{
+                
+                float: right;
+                font-size: 16px;  
+                color: #f2f2f2;
+                text-align: center;
+                padding: 0px 7px;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif; 
+            }
+            .socials img{
+                display: block;
+                height: auto;
+                width: 35px;
+            }
+            .vine{
+                background-image: url(base/plant-vine.png);
+                margin-left: 40px;
+                width: 90%;
+                height: 20vh;
+                background-repeat: repeat-x;
+                display: block;
+            }
+            /* The index center text */
+            
+           
+            .center-message, .center-lower-message{
+                color: white;
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+
+            .center-message {
+                top: 30%;
+                font-size: 60px;
+                font-family: cursive;
+            }
+
+            .center-lower-message{
+                
+                top: 39%;
+                font-size: 20px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            
+
+            /*about page body 1-----------------------------------------------------------*/
+            .about {
+                display: flex;
+                margin: 100px 400px 0px 400px;
+                transition: margin 1s ease; 
+
+            }
+            
+            .text1{
+                text-align: center;
+                margin: 30px 25px 70px;
+                transition: margin 1s ease;
+                width:40%;
+            }
+            .about p{
+                font-size: 22px;
+                transform: font-size 1s ease;
+                vertical-align: top;
+            }
+            .about h1{
+                margin-top: 25px;
+            }
+            
+            .image{
+                max-width: 60%;
+                height:auto;
+            }
+            .image img{
+                max-width: 90%;
+                height:auto;
+            }
+
+            /*livestream page body 2----------------------------------------------------*/
+            .MissionStatement {
+                display: flex;
+                transition: margin 1s ease;
+                
+            }
+            .MissionStatement .text2, .image{
+                vertical-align: top;
+                text-align: center;
+            }
+            .MissionStatement .text2{
+                width:40%;
+                margin-top: 50px;
+                transition: margin 1s ease;
+            }
+            
+            .MissionStatement p{
+                font-size: 22px;
+                transform: font-size 1s ease;
+                vertical-align: top;
+            }
+            .MissionStatement h1{
+                margin-top: -20px;
+            }
+
+            .MissionStatement img{
+                max-width: 85%;
+                height: auto;
+            }
+            .video-container{
+                max-width:60%;
+                height: auto;
+                text-align: center;
+            }
+            .myVideo{
+                margin-top: -40px;
+                width: 80%;
+                height: auto;  
+
+            }
+            
+            /*recruitment page body 3--------------------------------------------------------*/
+            .MissionStatement {
+                display: flex;
+                margin: 10px 400px;
+                transition: margin 1s ease;
+            }
+            .text3{
+                margin-top: -50px;
+                text-align: center;
+            }
+            .text3 p{
+                font-size: 20px;
+            }
+            .Class-Schedule img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 700px;
+                height: auto
+            }
+            .Class-Schedule{
+                margin-bottom: 40px;
+            }
+
+            /*footer-------------------------------------------------------------------------*/
+            footer{
+                text-align: center;
+                font-size: 17px;
+                padding: 30px;
+                background-color: rgb(15, 88, 64);
+                font-family: 'Courier New', Courier, monospace;
+            }
+            footer p{
+                color: white;
+            }
+            footer a{
+                color: rgb(198,159,197);
+            }
+            footer .projectIF img{
+                height: 100px;
+                width:auto;
+                text-align: center;
+            }
+
+            /*website scaling-------------------------------------------------------------------------*/
+            @media (max-width: 2000px) {
+                .about, .MissionStatement, .recruitment{
+                    margin-left: 70px;
+                    margin-right: 70px;
+                }
+            }
+            @media (max-width: 1200px) {
+                .right {
+                    margin-top: -30px;   
+                }
+                .MissionStatement .text2{
+                    margin-top: -100px;
+                }
+                .about p{
+                    font-size: 16px;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <!--Header-->
+        <div class="bg-img">
+            <div class="containerright">
+                <div class="socials">
+                    <a href="https://discord.gg/SQP5wBSW4J"><img src="index/discord.png"></a>
+                    <a href="mailto:projectif@uw.edu"><img src="index/mail.png"></a>
+                    <a href="https://www.linkedin.com/company/29310617/admin/"><img src="index/LinkedIn.png"></a>
+                    <a href="https://www.instagram.com/projectindoorfarm/"><img src="index/instagram.png"></a>
+                </div>
+                <div class="topnav">
+                    <a href="Livestream.html">Livestream</a>
+                    <a href="Join-Us.html">Join Us</a>
+                    <a href="index.html">Home</a>
+                </div>
+            </div>
+            <div class="containerleft">
+                <div class="Logo">
+                    <a href="index.html"><img src="base/Hotbar_Project-IF.png"></a>
+                    <a href="index.html"><b>Project Indoor Farm</b></a>
+                </div>
+            </div>
+        </div> 
+        <div class="top-image">
+            <h1><div class="center-message"><p>Let's Plant For The Future</p></div></h1>
+            <h3><div class="center-lower-message"><p>Promoting Education and Research of Indoor Farming
+            </p></div></h3>
+        </div>
+        <!--Body 1--> 
+        <div class="about">
+            <div class="image"><img src="index/IMG_6868.png"></div>
+
+            <div class="text1">
+                <h1>About Us</h1>
+                <p>We believe hydroponics is the most cost-efficient and sustainable way to grow crops.
+                    In 400 square feet, we can produce 256 Lettuce heads at our maximum capacity. We have 
+                    32 vertical hydroponic towers which we use with LED lights to produce a variety of crops
+                     - from leafy greens to flowers to fresh produce. Our production cycle begins with a seed 
+                     and ends with delicious and nutritious produce that we can share with our club members.
+                </p>
+            </div>
+        </div>
+        <div class="vine"></div>
+        <!--Body 2--> 
+        <div class="MissionStatement">
+            <div class="text2">
+                <h1>Mission Statement</h1>
+                <p>
+                    <!--Project IF is more than A farm, we want to create an educational space 
+                    for the UW community to connect with food through urban indoor farming.
+                    We welcome innovation and collaboration from students, clubs, and departments.
+                    
+                    Our final goal is to get funded by HSF to by replacing the lettuce in the salad
+                    bars they use with locally grown lettuce, reducing the expenses and carbon footprint
+                    of the University of Washington-->
+                    To educate and provide research support for UW students and the local community in 
+                    hopes to create a new generation of innovators ready to contribute to the growing 
+                    field of sustainable farming. 
+                </p>
+            </div>
+
+            
+            <div class="video-container">
+                
+                <video class="myVideo" controls poster="index/Ifvid-cover.jpg">
+                    <source src="index/IFvid.mp4" type="video/mp4">
+                    Your browser does not support this video.
+                </video>
+            </div>
+
+            
+
+
+        </div>
+        <div class="vine">
+            
+        </div>
+        <!--Body 3-->
+        <div class="recruitment">
+            <div class="text3">
+                <h1>Join Us Today!</h1>
+                <p>
+                    Mess with the Online Stuff later! Come down to Condon Hall during these dates and introduce 
+                    yourself to us during one of our club meetings.
+                </p>
+            </div>
+            
+            <div class="Class-Schedule">
+                <img src="index/Schedule.png">
+            </div>
+        </div>
+        <div class="vine">
+            
+        </div>
+    </body>
+        <!--credits-->
+    <footer>
+        <div class="projectIF"><img src="base/Project-IF.png" alt="projectIF"></div>
+        <p>Address: 1100 NE Campus Pkwy, Seattle, WA 98105 | Questions? Email:<a href="mailto:hocadoo@vuudoo.com">hocadoo@vuudoo.com</a> | 2023 <br><br>
+        Author: <a href="HocADoo.html">Alexander Vuu</a>
+        </p>
+        
+    </footer>
+
+
+</html>

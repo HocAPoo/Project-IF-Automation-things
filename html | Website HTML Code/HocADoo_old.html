@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project IF Club Website :D</title>
+    <style>
+      /* CSS for the slideshow container */
+      .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* CSS for the images */
+      .mySlides {
+        display: none;
+        max-width: 100%;
+        height: auto;
+      }
+      #imageContainer{
+        text-align: center;
+      }
+      #imageContainer img {
+        width: 600px;
+        height: auto;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1><center>HEHE HAWHAW I'M A SEXY BEAST</center></h1>
+    <h4><center>HocADoo</center></h4>
+    <div id="imageContainer"></div>
+    <div id="imageIndex"></div>
+
+
+
+    <script>
+      showSlides();
+
+      function showSlides() {
+        var startIndex = 1;
+        //var endIndex = 1000;
+        
+        var delay = 5000;
+        var container = document.getElementById('imageContainer');
+        var indexContainer = document.getElementById('imageIndex');
+        var currentIndex = startIndex;
+
+        function displayNextImage() {
+          var image = new Image();
+          image.src = '/PiVid1/image' + currentIndex + '.jpg';
+
+          image.onerror = function() {
+            currentIndex = currentIndex - 1
+            image.src = '/PiVid1/image' + currentIndex + '.jpg';
+              
+          }
+
+          container.innerHTML = '';
+          container.appendChild(image);
+
+          currentIndex++;
+          indexContainer.textContent = 'The Current photo number: '+ currentIndex; 
+          //if (currentIndex > endIndex) {
+          //  currentIndex = startIndex; // Wrap index back to the beginning
+          //}
+
+          setTimeout(displayNextImage, delay); // Delay for the specified delay value
+        }
+
+        displayNextImage();
+      }
+
+
+
+
+    </script>
+  </body>
+</html>
+
+
+
